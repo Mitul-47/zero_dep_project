@@ -1,11 +1,11 @@
-# TerminalAlpha 🚀
+# TerminalAlpha 
 > **Masterclass Financial Backtesting Engine in Pure Java (Zero External Dependencies)**
 
 `TerminalAlpha` is a high-performance, single-file financial backtesting engine designed with **deep mechanical sympathy** for modern CPU architectures and the JVM. It processes multi-million tick market datasets at maximum hardware throughput without triggering Garbage Collection (GC) pauses.
 
 ---
 
-## ⚡ Core Engineering & Mechanical Sympathy
+## Core Engineering & Mechanical Sympathy
 
 1. **Zero External Dependencies**: Built 100% on pure `java.base` (Standard Library). Requires no Maven, Gradle, or external JARs.
 2. **Single-File Architecture**: Entire application, CLI router, NIO parser, strategy engine, metrics suite, and Unicode UI contained within `TerminalAlpha.java`.
@@ -16,7 +16,7 @@
 
 ---
 
-## 📋 Command Line Interface (CLI) Usage
+## Command Line Interface (CLI) Usage
 
 ### 1. Generate Synthetic Market Ticks (GBM Engine)
 Generates $N$ synthetic tick rows using Geometric Brownian Motion (GBM) with a fixed seed (`42`):
@@ -54,7 +54,7 @@ java -ea TerminalAlpha --test
 
 ---
 
-## 📈 Supported Trading Strategies
+## Supported Trading Strategies
 
 | Strategy Name | Description | Key Parameters |
 | :--- | :--- | :--- |
@@ -63,7 +63,7 @@ java -ea TerminalAlpha --test
 
 ---
 
-## 📊 Institutional Metrics Engine
+## Institutional Metrics Engine
 
 - **Net Profit %**: Percentage capital growth from initial balance ($100,000 base).
 - **Win Rate %**: Percentage of closed trades resulting in positive net profit after slippage.
@@ -74,7 +74,7 @@ java -ea TerminalAlpha --test
 
 ---
 
-**🔒 Reproducible Build Verification (+5 Bonus)**
+**Reproducible Build Verification (+5 Bonus)**
 This project guarantees a perfectly deterministic, reproducible build on the same machine and toolchain. We bypass `.jar` packaging and compile directly to raw `.class` bytecode to prove byte-for-byte identical output.
 
 **Build Toolchain:** Java(TM) SE Runtime Environment (build 25)
