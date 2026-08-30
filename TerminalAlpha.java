@@ -181,7 +181,8 @@ public class TerminalAlpha {
                 strategy.getName(), computeTimeMs, result.totalTrades(), result.finalEquity());
         System.out.printf("Garbage Collections    : %d GC events\n", (endGc - startGc));
         System.out.println("================================================================================");
-        System.out.println("[Benchmark Completed] Stable memory footprint verified. Minor GC events constrained strictly to JVM initialization.");
+        System.out.println(
+                "[Benchmark Completed] Stable memory footprint verified. Minor GC events constrained strictly to JVM initialization.");
     }
 
     private static void runFileBacktest(String filePath, String strategyName, String startStr, String endStr)

@@ -3,7 +3,7 @@
 **Track F (Open / Wildcard)**
 TerminalAlpha is an enterprise-grade quantitative backtesting engine and parser built to prove that Java, when subjected to strict mechanical sympathy and zero-allocation memory constraints, can process financial tick data at native C++ speeds (40M+ ticks/sec) without a single third-party framework.
 
-## The STDLIB Log 
+## The STDLIB Log
 Below are 10 real, non-trivial standard-library substitutions made to keep the dependency manifest entirely empty while building a system that typically requires massive financial and data-science ecosystems:
 
 1. **`OpenCSV` / `commons-csv` -> `java.nio.MappedByteBuffer`**
