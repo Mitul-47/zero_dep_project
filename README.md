@@ -10,6 +10,13 @@ To guarantee a clean compilation and instantly verify the reproducible SHA-256 h
 ```bash
 .\build.bat
 ```
+**One-Step Deterministic Build (macOS / Linux)**
+
+To guarantee a clean compilation and instantly verify the reproducible SHA-256 hash, run the included shell script:
+```bash
+chmod +x build.sh
+./build.sh
+```
 
 ## Core Engineering & Mechanical Sympathy
 
