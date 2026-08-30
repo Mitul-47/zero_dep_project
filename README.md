@@ -40,7 +40,7 @@ java TerminalAlpha --benchmark benchmark.csv --strategy SmaCrossover
 Executes strategy backtest and renders the **Bloomberg Terminal Tear-Sheet**:
 ```bash
 # Run on full dataset
-java TerminalAlpha --file crude_oil_sample.csv --strategy SmaCrossover
+java TerminalAlpha --file crude_oil_sample.csv --strategy MomentumBreakout
 
 # Run with optional duration/date range filtering (--start / --end)
 java TerminalAlpha --file crude_oil_sample.csv --strategy SmaCrossover --start 2022-01-01 --end 2023-01-01
@@ -49,7 +49,7 @@ java TerminalAlpha --file crude_oil_sample.csv --strategy SmaCrossover --start 2
 ### 4. Parallel Strategy Parameter Optimizer
 Concurrently tests parameter combinations across all available CPU cores to maximize Sharpe Ratio:
 ```bash
-java TerminalAlpha --optimize --file crude_oil_sample.csv --strategy SmaCrossover
+java TerminalAlpha --optimize --file crude_oil_sample.csv --strategy MomentumBreakout
 ```
 
 ### 5. Internal Verification Test Suite
