@@ -4,6 +4,12 @@
 `TerminalAlpha` is a high-performance, single-file financial backtesting engine designed with **deep mechanical sympathy** for modern CPU architectures and the JVM. It processes multi-million tick market datasets at maximum hardware throughput without triggering Garbage Collection (GC) pauses.
 
 ---
+**One-Step Deterministic Build (Windows)**
+
+To guarantee a clean compilation and instantly verify the reproducible SHA-256 hash, run the included batch script:
+```bash
+.\build.bat
+```
 
 ## Core Engineering & Mechanical Sympathy
 
@@ -74,6 +80,20 @@ java -ea TerminalAlpha --test
 
 ---
 
+## Dependency Proof (Zero Third-Party Manifest)
+To definitively prove the absence of hidden dependencies, the native Java Class Dependency Analyzer (`jdeps`) confirms `TerminalAlpha` relies entirely on core JDK modules (`java.base` and `java.management` for Garbage Collection telemetry)[cite: 1].
+
+```text
+PS > jdeps TerminalAlpha.class
+TerminalAlpha.class -> java.base[cite: 1]
+TerminalAlpha.class -> java.management[cite: 1]
+   <unnamed>                                          -> java.io                                            java.base[cite: 1]
+   <unnamed>                                          -> java.lang                                          java.base[cite: 1]
+   <unnamed>                                          -> java.lang.invoke                                   java.base[cite: 1]
+   <unnamed>                                          -> java.lang.management                               java.management[cite: 1]
+   <unnamed>                                          -> java.time                                          java.base[cite: 1]
+   <unnamed>                                          -> java.util                                          java.base[cite: 1]
+```
 **Reproducible Build Verification (+5 Bonus)**
 This project guarantees a perfectly deterministic, reproducible build on the same machine and toolchain. We bypass `.jar` packaging and compile directly to raw `.class` bytecode to prove byte-for-byte identical output.
 
@@ -95,3 +115,11 @@ PS > Get-FileHash TerminalAlpha.class
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
 SHA256          036096FB0FEABBBBD5D815DE439701DA7D5508F9C159DB04A977BBE08BA2D2B8       .\TerminalAlpha.class
+
+```
+## Zero-Dependency Test Suite
+Standard frameworks like JUnit violate the zero-dependency constraint. The test suite is built directly into the engine using pure Java `assert` statements to verify mathematical integrity, broker execution (slippage), and memory offset parsing. 
+
+Execute the verification suite using the `-ea` (enable assertions) flag:
+```bash
+java -ea TerminalAlpha.java --test
